@@ -55,6 +55,9 @@
         "*": "x",
       }
 
+      const result = $(".result");
+      const historyCalculate = $(".calc");
+
       $(".button button").on("click", function(e) {
         let clicked = $(this).val();
         console.log(clicked)
@@ -63,26 +66,24 @@
         if (clicked === "=") {
           try {
             let val = eval(op);
-            $(".result").text(val);
-            $(".calc").text(op);
-            // console.log(val)
-            // result.text(val);
+            result.text(val);
+            historyCalculate.text(op);
             op = val;
           } catch {
             op = ""
           }
         } else if (clicked === "AC") {
           op = "";
-          $(".result").text(op)
-          $(".calc").text(op);
+          result.text(op)
+          historyCalculate.text(op)
         }
         else if (clicked === "C") {
           op = op.slice(0, -1);
-          $(".result").text(op);
+          result.text(op);
         }
         else if (clicked !== undefined) {
           op += clicked;
-          $(".result").text(op)
+          result.text(op);
           console.log(clicked);
         }
         else {
