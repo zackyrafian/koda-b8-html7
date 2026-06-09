@@ -1,4 +1,11 @@
-# Mini Task Grid Caluclator
+# Caluclator
+
+## Desripsi
+Sebuah aplikasi kalkulator berbasis web sederhana dengan tampilan minimalis
+
+## Tech stack
+- HTML5
+- jQuery
 
 ## Preview
-![alt text](<Screenshot 2026-06-02 at 2.44.14 PM.png>)
+![Calculator](docs/calc.gif)
